@@ -24,29 +24,29 @@ def test_binary_even():
     assert not v.binary_even("1011")
 
 
-# @xfail
-# def test_hexadecimal():
-#     assert v.hex("CAFE")
-#     assert v.hex("9F9")
-#     assert v.hex("123")
-#     assert v.hex("6720EB3A9D1")
-#     assert not v.hex("")
-#     assert not v.hex("COFFEE")
-#
-#
-# @xfail
-# def test_word():
-#     assert v.word("hello")
-#     assert v.word("wonderful")
-#     assert v.word("zyggon")
-#     assert v.word("horse-dagger")
-#     assert v.word("18-wheeler")
-#     assert not v.word("")
-#     assert not v.word("12")
-#     assert not v.word("!!!")
-#     assert not v.word("bar*us")
-#
-#
+@xfail
+def test_hexadecimal():
+    assert v.hex("CAFE")
+    assert v.hex("9F9")
+    assert v.hex("123")
+    assert v.hex("6720EB3A9D1")
+    assert not v.hex("")
+    assert not v.hex("COFFEE")
+
+
+@xfail
+def test_word():
+    assert v.word("hello")
+    assert v.word("wonderful")
+    assert v.word("zyggon")
+    assert v.word("horse-dagger")
+    assert v.word("18-wheeler")
+    assert not v.word("")
+    assert not v.word("12")
+    assert not v.word("!!!")
+    assert not v.word("bar*us")
+
+"""SKIP IT"""
 # @xfail
 # def test_words():
 #     """words can take an optional count argument. In case it exists, the text
@@ -67,8 +67,8 @@ def test_binary_even():
 #     assert not v.words("hello world", count=3)
 #     assert not v.words("raggggg hammer dog", count=1)
 #     assert not v.words("18-wheeler tarbox", count=3)
-#
-#
+
+
 # @xfail
 # def test_phone_numbers():
 #     """US phone numbers only."""
