@@ -1,32 +1,32 @@
-# import pytest
-# xfail = pytest.mark.xfail
-# params = pytest.mark.parametrize
-#
-# import textminer.separator as s
-#
-# @xfail
-# @params("input,expected", [
-#     ("hello", ['hello']),
-#     ("hello world", ['hello', 'world']),
-#     ("raggggg hammer dog", ['raggggg', 'hammer', 'dog']),
-#     ("18-wheeler tarbox", ['18-wheeler', 'tarbox']),
-#     ("12", None),
-# ])
-# def test_words(input, expected):
-#     assert s.words(input) == expected
-#
-#
-# @xfail
-# @params("input,expected", [
-#     ("919-555-1212", {"area_code": "919", "number": "555-1212"}),
-#     ("(919) 555-1212", {"area_code": "919", "number": "555-1212"}),
-#     ("9195551212", {"area_code": "919", "number": "555-1212"}),
-#     ("919.555.1212", {"area_code": "919", "number": "555-1212"}),
-#     ("919 555-1212", {"area_code": "919", "number": "555-1212"}),
-#     ("555-121", None)
-# ])
-# def test_phone_numbers(input, expected):
-#     assert s.phone_number(input) == expected
+import pytest
+xfail = pytest.mark.xfail
+params = pytest.mark.parametrize
+
+import textminer.separator as s
+
+@xfail
+@params("input,expected", [
+    ("hello", ['hello']),
+    ("hello world", ['hello', 'world']),
+    ("raggggg hammer dog", ['raggggg', 'hammer', 'dog']),
+    ("18-wheeler tarbox", ['18-wheeler', 'tarbox']),
+    ("12", None),
+])
+def test_words(input, expected):
+    assert s.words(input) == expected
+
+
+@xfail
+@params("input,expected", [
+    ("919-555-1212", {"area_code": "919", "number": "555-1212"}),
+    ("(919) 555-1212", {"area_code": "919", "number": "555-1212"}),
+    ("9195551212", {"area_code": "919", "number": "555-1212"}),
+    ("919.555.1212", {"area_code": "919", "number": "555-1212"}),
+    ("919 555-1212", {"area_code": "919", "number": "555-1212"}),
+    ("555-121", None)
+])
+def test_phone_numbers(input, expected):
+    assert s.phone_number(input) == expected
 #
 #
 # @xfail
